@@ -1,0 +1,35 @@
+{
+  "name": "ar_menu",
+  "version": "1.0.1",
+  "description": "This example is so cool.",
+  "main": "node ./bin/www",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
+  "keywords": [
+    "AR",
+    "MENU"
+  ],
+  "author": "Cai JingHong",
+  "license": "MIT",
+  "engines": {
+    "node": "14.18.1"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cookie-session": "^2.0.0",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-fileupload": "^1.2.0",
+    "express-flash": "0.0.2",
+    "http-errors": "^1.6.3",
+    "method-override": "^3.0.0",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6"
+  }
+}
