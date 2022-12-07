@@ -30,7 +30,8 @@ window.addEventListener('load', async () => {
 async function cloudinaryfetch() {
     // const key = `007d1d8e-425f-474d-a8a0-7235cad917c6`
     const key = lookUpKey;
-    const baseUrl = "https://secret-chamber-85356.herokuapp.com"
+    // const baseUrl = "https://secret-chamber-85356.herokuapp.com"
+    const baseUrl = "http://localhost:9512"
     const result = await axios.get(`${baseUrl}/file_management/public/file_obj/${key}`);
     const myObject = result.data.data.data;
     // const myObject = [
