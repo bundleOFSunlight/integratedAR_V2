@@ -27,12 +27,21 @@ window.addEventListener('load', async () => {
         await loadFirstVideo(loadedVideos)
         document.body.removeEventListener("click", loadedPlanes, false);
         black_screen.style.visibility = "visible";
+        $('#exampleModal').modal('show');
     })
     // 
     black_screen_solver.addEventListener('click', async function touchScreen() {
         black_screen.style.display = "none";
         await loadFirstVideo(loadedVideos);
         document.body.removeEventListener("click", touchScreen, false);
+        $('#exampleModal').modal('hide');
+    })
+    //
+    const button_modal = document.getElementById('modal_button');
+    button_modal.addEventListener('click', async function modal_hide() {
+        black_screen.style.display = "none";
+        await loadFirstVideo(loadedVideos);
+        $('#exampleModal').modal('hide');
     })
 });
 
