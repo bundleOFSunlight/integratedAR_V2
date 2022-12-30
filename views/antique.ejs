@@ -27,6 +27,8 @@
         #my-ar-container {
             height: 600px;
             overflow: hidden;
+            position: relative;
+            z-index: 10;
         }
 
         #ready {
@@ -190,6 +192,10 @@
         .sticky+.content {
             padding-top: 60px;
         }
+
+        .p3 {
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
     </style>
 </head>
 
@@ -238,7 +244,11 @@
 
     <div class="preloader">
     </div>
-    <div id="my-ar-container"></div>
+    <div id="my-ar-container" role=button>
+        <p id="black_screen" class="text-warning display-4 p3 text-center align-middle" style="visibility: hidden;">
+            Touch
+            screen and scan</p>
+    </div>
 
     <script>
         window.onscroll = function () { myFunction() };

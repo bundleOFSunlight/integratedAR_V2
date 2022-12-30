@@ -16,12 +16,23 @@ window.addEventListener('load', async () => {
     const startLabel = document.getElementById('pending_label');
     startLabel.style.display = "none";
     // const hide_card = document.getElementById('hiddingCard');
+
+    const black_screen_solver = document.getElementById('my-ar-container');
+    const black_screen = document.getElementById('black_screen');
+
     startButton.addEventListener('click', async function loadedPlanes() {
         hideDiv();
         startButton.style.display = "none"; //button will disappear upon click
         await start_ar(loadedVideos, mind_file);
         await loadFirstVideo(loadedVideos)
         document.body.removeEventListener("click", loadedPlanes, false);
+        black_screen.style.visibility = "visible";
+    })
+    // 
+    black_screen_solver.addEventListener('click', async function touchScreen() {
+        black_screen.style.display = "none";
+        await loadFirstVideo(loadedVideos);
+        document.body.removeEventListener("click", touchScreen, false);
     })
 });
 
