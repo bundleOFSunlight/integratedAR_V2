@@ -196,6 +196,14 @@
         .p3 {
             font-family: "Lucida Console", "Courier New", monospace;
         }
+
+        #exampleModal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding-top: 15%;
+        }
     </style>
 </head>
 
@@ -244,9 +252,6 @@
 
     <div class="preloader">
     </div>
-    <div id="my-ar-container" role=button>
-        <p id="black_screen" class="text-warning display-4 p3 text-center align-middle" style="visibility: hidden;"></p>
-    </div>
 
     <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -266,6 +271,10 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="my-ar-container" role=button>
+        <p id="black_screen" class="text-warning display-4 p3 text-center align-middle" style="visibility: hidden;"></p>
     </div>
 
     <script>
