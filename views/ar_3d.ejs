@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script
+        src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script
+        src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+    <a-scene vr-mode-ui="enabled: false;" loading-screen="enabled: false;" renderer="logarithmicDepthBuffer: true;"
+        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene" embedded gesture-detector>
+        <a-assets>
+            <a-asset-item id="animated-asset"
+                src="https://res.cloudinary.com/dwuqadyl0/image/upload/v1673245921/mind_ar/asset/0f0bf301-dcae-4b0e-a55e-9e4e6e925366.glb"></a-asset-item>
+        </a-assets>
+
+        <a-marker id="animated-marker" type="pattern" preset="custom"
+            url="https://res.cloudinary.com/dwuqadyl0/raw/upload/v1673246058/mind_ar/marker/9e1d58d7-96fa-437f-9d09-16012c62fda5"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
+            <a-entity id="bowser-model" scale="0.293562404222061 0.293562404222061 0.293562404222061"
+                animation-mixer="loop: repeat" gltf-model="#animated-asset" class="clickable"
+                gesture-handler></a-entity>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+
+</html>

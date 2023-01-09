@@ -44,4 +44,15 @@ router.get('/antique/:key', async function (req, res, next) {
 
 })
 
+router.get('/ar/3d', async function (req, res, next) {
+	try {
+		return res.render('ar_3d', {
+		});
+	} catch {
+		return res.render('error', {
+		});
+	}
+
+})
+
 module.exports = router;
